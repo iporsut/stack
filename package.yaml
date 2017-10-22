@@ -43,7 +43,6 @@ library:
   ghc-options:
   - -fwarn-identities
   exposed-modules:
-  - Build_stack
   - Control.Concurrent.Execute
   - Data.Aeson.Extended
   - Data.Attoparsec.Args

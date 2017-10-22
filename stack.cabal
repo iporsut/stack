@@ -165,7 +165,6 @@ library
     build-tools:
         hsc2hs >=0.68
   exposed-modules:
-      Build_stack
       Control.Concurrent.Execute
       Data.Aeson.Extended
       Data.Attoparsec.Args
