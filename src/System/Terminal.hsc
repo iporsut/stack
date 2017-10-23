@@ -4,7 +4,7 @@ module System.Terminal
 ( getTerminalWidth
 ) where
 
-#ifdef WINDOWS
+#ifndef WINDOWS
 
 import           Foreign
 import           Foreign.C.Types
