@@ -103,6 +103,7 @@ Other enhancements:
 * `--cwd DIR` can now be passed to `stack exec` in order to execute the
   program in a different directory. See:
   [#3264](https://github.com/commercialhaskell/stack/issues/3264)
+* Switch to hpack `package.yaml` to build Stack itself
 
 Bug fixes:
 
