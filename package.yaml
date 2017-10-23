@@ -167,11 +167,12 @@ library:
   - System.Process.PagerEditor
   - System.Process.Read
   - System.Process.Run
+  - System.Terminal
   dependencies:
   - aeson >=1.0
   - ansi-terminal >=0.6.2.3
   - attoparsec >=0.12.1.5
-  - base >=4.9
+  - base >=4.9 && < 5
   - base64-bytestring
   - blaze-builder
   - clock >=0.7.2
@@ -255,7 +256,7 @@ executables:
     ghc-options:
     - -threaded
     dependencies:
-    - base >=4.7
+    - base >=4.7 && < 5
     - filelock >=0.1.0.1
     - hpack >=0.17.0
     - http-client >=0.5.3.3
@@ -265,6 +266,8 @@ executables:
     - split
     - stack
     - text >=1.2.0.4
+    other-modules:
+    - Paths_stack
     when:
     - condition: flag(static)
       ld-options:
@@ -290,7 +293,7 @@ tests:
     dependencies:
     - QuickCheck >=2.8.2
     - attoparsec
-    - base >=4.7
+    - base >=4.7 && < 5
     - conduit-extra
     - cryptonite >=0.19
     - hspec >=2.2
@@ -326,7 +329,7 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - async
-    - base >=4.7
+    - base >=4.7 && < 5
     - conduit-extra >=1.1.14
     - hspec >=2.2
     - process >=1.2.0.0

@@ -89,7 +89,7 @@ library
     , aeson >=1.0
     , ansi-terminal >=0.6.2.3
     , attoparsec >=0.12.1.5
-    , base >=4.9
+    , base >=4.9 && < 5
     , base64-bytestring
     , blaze-builder
     , clock >=0.7.2
@@ -289,9 +289,9 @@ library
       System.Process.PagerEditor
       System.Process.Read
       System.Process.Run
+      System.Terminal
   other-modules:
       Hackage.Security.Client.Repository.HttpLib.HttpClient
-      System.Terminal
   default-language: Haskell2010
 
 executable stack
@@ -310,7 +310,7 @@ executable stack
     , path >=0.6
     , path-io >=1.1.0
     , transformers >=0.3.0.0
-    , base >=4.7
+    , base >=4.7 && < 5
     , filelock >=0.1.0.1
     , hpack >=0.17.0
     , http-client >=0.5.3.3
@@ -333,6 +333,8 @@ executable stack
       , optparse-simple >=0.0.3
   if flag(hide-dependency-versions)
     cpp-options: -DHIDE_DEP_VERSIONS
+  other-modules:
+      Paths_stack
   default-language: Haskell2010
 
 test-suite stack-integration-test
@@ -354,7 +356,7 @@ test-suite stack-integration-test
     , path-io >=1.1.0
     , transformers >=0.3.0.0
     , async
-    , base >=4.7
+    , base >=4.7 && < 5
     , conduit-extra >=1.1.14
     , hspec >=2.2
     , process >=1.2.0.0
@@ -387,7 +389,7 @@ test-suite stack-test
     , transformers >=0.3.0.0
     , QuickCheck >=2.8.2
     , attoparsec
-    , base >=4.7
+    , base >=4.7 && < 5
     , conduit-extra
     , cryptonite >=0.19
     , hspec >=2.2

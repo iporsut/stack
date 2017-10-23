@@ -4,6 +4,8 @@ module System.Terminal
 ( getTerminalWidth
 ) where
 
+#ifdef WINDOWS
+
 import           Foreign
 import           Foreign.C.Types
 
@@ -33,3 +35,11 @@ getTerminalWidth =
       else do
         WindowWidth w <- peek p
         return . Just . fromIntegral $ w
+
+#else //WINDOWS
+
+-- | Get the width, in columns, of the terminal if we can.
+getTerminalWidth :: IO (Maybe Int)
+getTerminalWidth = return Nothing
+
+#endif //WINDOWS
