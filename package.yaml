@@ -12,6 +12,12 @@ maintainer: manny@fpcomplete.com
 license: BSD3
 github: commercialhaskell/stack.git
 homepage: http://haskellstack.org
+build-type: Custom
+custom-setup:
+  dependencies:
+  - base
+  - Cabal >= 2.0
+  - filepath
 extra-source-files:
 - CONTRIBUTING.md
 - ChangeLog.md
