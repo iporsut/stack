@@ -115,6 +115,8 @@ dependencies:
 - yaml
 - zip-archive
 - zlib
+build-tools:
+- hsc2hs
 when:
 - condition: os(windows)
   then:
@@ -122,8 +124,6 @@ when:
     dependencies:
     - Win32
   else:
-    build-tools:
-    - hsc2hs
     dependencies:
     - unix
     - pid1
